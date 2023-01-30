@@ -1,0 +1,42 @@
+@import "../../../styles/main.module";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+
+    .back {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-items: flex-start;
+        @include respond(phone) {
+            width: 400px;
+        }
+        @include respond(smallPhone) {
+            width: 300px;
+        }
+        span {
+            display: flex;
+            flex-direction: column;
+            padding: 16px 0;
+            color: $color-primary;
+            cursor: pointer;
+        }
+    }
+    .adViewImg {
+        width: 500px;
+        @include respond(phone) {
+            width: 400px;
+        }
+        @include respond(smallPhone) {
+            width: 300px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

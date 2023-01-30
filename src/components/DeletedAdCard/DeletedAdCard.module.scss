@@ -1,0 +1,53 @@
+@import "../../../styles/main.module";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 60px;
+    .main {
+        display: flex;
+        width: 500px;
+        height: 106px;
+        flex-direction: row;
+        gap: 24px;
+        background: $color-white;
+        border: 1px solid $color-primary-1;
+        border-radius: 4px;
+        padding: 8px;
+        cursor: pointer;
+        @include respond(phone) {
+            width: 400px;
+        }
+        @include respond(smallPhone) {
+            width: 300px;
+        }
+        .deletedAdImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $color-primary-1;
+        }
+        .content {
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .name {
+                    color: $color-gray;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.container:first-child {
+    margin: 12px 0 0 0;
+}

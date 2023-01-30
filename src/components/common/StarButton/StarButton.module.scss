@@ -1,0 +1,14 @@
+@import "../../../../styles/main.module";
+
+.container {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}
