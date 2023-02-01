@@ -1,5 +1,5 @@
 import { IAds } from "./ads";
 
-export interface IStarButton {
+export interface IFavoriteAd {
     ad: IAds;
 }

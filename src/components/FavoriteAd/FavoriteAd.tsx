@@ -1,13 +1,13 @@
 import { FC, useEffect, useState } from 'react';
-import styles from './StarButton.module.scss';
+import styles from './FavoriteAd.module.scss';
 import StarSvg from '../../../styles/icons/star.svg';
 import FiledStarSvg from '../../../styles/icons/filled_star.svg';
-import { IStarButton } from '@/interfaces/buttons';
+import { IFavoriteAd } from '@/interfaces/buttons';
 import { useAppDispatch } from '@/redux/hooks';
 import { favoriteAd, unfavoriteAd } from '@/redux/ads';
 import { favoritedAd, unfavoritedAd } from '@/APIs/adService';
 
-const StarButton: FC<IStarButton> = ({ ad }) => {
+const FavoriteAd: FC<IFavoriteAd> = ({ ad }) => {
 
     const dispatch = useAppDispatch();
     const [isClicked, setClicked] = useState(false);
@@ -34,4 +34,4 @@ const StarButton: FC<IStarButton> = ({ ad }) => {
     )
 };
 
-export default StarButton;
+export default FavoriteAd;

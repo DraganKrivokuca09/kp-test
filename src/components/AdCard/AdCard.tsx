@@ -3,7 +3,7 @@ import styles from './AdCard.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { IAdCard } from '@/interfaces/ads';
-import StarButton from '@/components/StarButton/StarButton';
+import FavoriteAd from '@/components/FavoriteAd/FavoriteAd';
 
 const AdCard: FC<IAdCard> = ({ ad, singleAd }) => {
 
@@ -31,7 +31,7 @@ const AdCard: FC<IAdCard> = ({ ad, singleAd }) => {
                 </div>
                 {!ad?.deleted &&
                     <div className={styles.star}>
-                        <StarButton ad={ad} />
+                        <FavoriteAd ad={ad} />
                     </div>
                 }
             </div>
