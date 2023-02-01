@@ -4,17 +4,26 @@ import { getSingleKPAd } from "@/APIs/adService";
 import { setSingleAd } from "@/redux/ads";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useEffect } from "react";
+import Head from "next/head";
 
 const AdViewID: NextPage<any> = ({ ad }) => {
 
     const dispatch = useAppDispatch();
     const singleAd = useAppSelector((state) => state?.ads?.singleAd);
+    const headTitle = `Oglas ${singleAd?.id}`
 
     useEffect(() => {
         dispatch(setSingleAd(ad));
     }, [ad])
 
-    return <AdView ad={singleAd} />
+    return (
+        <>
+            <Head>
+                <title>{headTitle}</title>
+            </Head>
+            <AdView ad={singleAd} />
+        </>
+    )
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
