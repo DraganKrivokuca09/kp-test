@@ -3,9 +3,9 @@ import styles from './AdView.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import AdCard from '../AdCard/AdCard';
-import Description from '../Description/Description';
-import DeletedAdCard from '../DeletedAdCard/DeletedAdCard';
-import { IAdView } from '@/interfaces/ads';
+import Description from '@common/Description/Description';
+import DeletedAdCard from '@common/DeletedAdCard/DeletedAdCard';
+import { IAdView } from '@interfaces/ads';
 
 
 const AdView: FC<IAdView> = ({ ad }) => {

@@ -30,6 +30,9 @@
             "@components/*": [
                 "src/components/*"
             ],
+            "@common/*": [
+                "src/components/common/*"
+            ],
             "@redux/*": [
                 "src/redux/*"
             ],

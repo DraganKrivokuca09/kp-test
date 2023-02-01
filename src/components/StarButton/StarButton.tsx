@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './StarButton.module.scss';
-import StarSvg from '../../../../styles/icons/star.svg';
-import FiledStarSvg from '../../../../styles/icons/filled_star.svg';
+import StarSvg from '../../../styles/icons/star.svg';
+import FiledStarSvg from '../../../styles/icons/filled_star.svg';
 import { IStarButton } from '@/interfaces/buttons';
 import { useAppDispatch } from '@/redux/hooks';
 import { favoriteAd, unfavoriteAd } from '@/redux/ads';

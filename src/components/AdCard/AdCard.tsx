@@ -3,7 +3,7 @@ import styles from './AdCard.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { IAdCard } from '@/interfaces/ads';
-import StarButton from '@/components/common/StarButton/StarButton';
+import StarButton from '@/components/StarButton/StarButton';
 
 const AdCard: FC<IAdCard> = ({ ad, singleAd }) => {
 
